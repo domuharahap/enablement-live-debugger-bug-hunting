@@ -86,6 +86,10 @@ public class TodoController {
                 }
             }
         }
+        int actualSize = todos.getAll().length;
+        if (actualSize < previousSize){
+            logger.info("Todo record removed succesfully");
+        }
         logger.error("failed to delete completed todos");
         Map<String, String> entities = new HashMap<>();
         entities.put("status", "ok");
