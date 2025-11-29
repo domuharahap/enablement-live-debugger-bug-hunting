@@ -79,7 +79,7 @@ public class TodoController {
         List<TodoRecord> todoStore = new ArrayList<>();
         logger.debug("todoStore size is {}", todoStore.size());
         for (TodoRecord todoRecord : todos.getAll()) {
-            if (todoRecord.isCompleted()) {
+            if (todos.isCompleted()) {
                 // The bug in here in is for the bughunt example
                 if (todoStore.remove(todoRecord)) {
                     logger.info("Removing Todo record: {}", todoRecord);
