@@ -76,8 +76,8 @@ public class TodoController {
         logger.debug("reading todoStore from database");
         logger.debug("SELECT * FROM todos WHERE status='conpleted'");
         // The bug in here in is for the bughunt example
-        List<TodoRecord> todoStore = new ArrayList<>();
-        logger.debug("todoStore size is {}", todoStore.size());
+        int previousSize = todos.getAll().length;
+        logger.info("todos size is {}", previousSize);
         for (TodoRecord todoRecord : todos.getAll()) {
             if (todoRecord.isCompleted()) {
                 // The bug in here in is for the bughunt example
