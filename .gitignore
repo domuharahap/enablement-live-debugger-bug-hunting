@@ -168,8 +168,8 @@ site/*
 # no env files
 .devcontainer/util/.env*
 .devcontainer/util/.count*
-.devcontainer/.env*
-.devcontainer/.env*
+#.devcontainer/.env*
+#.devcontainer/.env*
 
 #no count
 .devcontainer/util/.count*
